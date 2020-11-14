@@ -6,9 +6,11 @@ import (
 	"net"
 	"time"
 )
-
+/**
+我们的第一个例子是一个顺序执行的时钟服务器，它会每隔一秒钟将当前时间写到客户端：
+ */
 func main() {
-	listener, err := net.Listen("tcp", "localhost:8000")
+	listener, err := net.Listen("tcp", "localhost:9000")
 	if err != nil {
 		log.Fatal(err)
 	}
