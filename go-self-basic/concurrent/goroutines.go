@@ -12,12 +12,16 @@ import (
 */
 
 func main() {
+	defer testP()
 	go spinner(100 * time.Millisecond)
 	const n = 45
 	fibN := fib(n) // slow
 	fmt.Printf("\rFibonacci(%d) = %d\n", n, fibN)
 }
 
+func testP(){
+	fmt.Printf("test test");
+}
 func spinner(delay time.Duration) {
 	for {
 		// range 在数组和切片中它返回元素的索引和索引对应的值，在集合中返回 key-value 对。
